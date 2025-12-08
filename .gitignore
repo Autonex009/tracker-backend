@@ -1,56 +1,81 @@
-####################################
-# Python general
-####################################
-__pycache__/
-*.py[cod]
-*$py.class
-
-####################################
-# Virtual environments
-####################################
-venv/
-.venv/
-env/
-.env/
-
-####################################
-# macOS / Finder
-####################################
+# =========================================
+# GLOBAL
+# =========================================
 .DS_Store
-.AppleDouble
-.LSOverride
-
-Icon
-
-####################################
-# Build / packaging artifacts
-####################################
-build/
-dist/
-*.egg-info/
-*.egg
-*.manifest
-*.spec
-
-####################################
-# PyInstaller / py2app artifacts
-####################################
+Thumbs.db
 *.log
 *.tmp
 *.bak
-*.orig
+*.swp
+*.swo
 
-####################################
-# Editor / IDE
-####################################
+# =========================================
+# PYTHON / FASTAPI BACKEND
+# =========================================
+
+# Virtual environment
+hi-autonex/backend/venv/
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# PyInstaller build artifacts
+hi-autonex/backend/build/
+hi-autonex/backend/dist/
+hi-autonex/backend/*.spec
+
+# Uvicorn logs
+*.pid
+*.db
+
+# =========================================
+# NODE / ELECTRON FRONTEND
+# =========================================
+
+# Node modules
+hi-autonex/electron-app/node_modules/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Electron build artifacts
+hi-autonex/electron-app/dist/
+hi-autonex/electron-app/out/
+hi-autonex/electron-app/build/
+
+# Electron packaged resources
+hi-autonex/electron-app/resources/run_uvicorn
+hi-autonex/electron-app/resources/run_uvicorn.exe
+
+# Cache
+hi-autonex/electron-app/.cache/
+hi-autonex/electron-app/.vite/
+hi-autonex/electron-app/.parcel-cache/
+
+# =========================================
+# OS Metadata
+# =========================================
+*.orig
+*.icloud
+
+# =========================================
+# EDITOR / IDE FILES
+# =========================================
 .vscode/
 .idea/
-*.swp
-*~
+*.iml
 
-####################################
-# Python bytecode archives
-####################################
-*.pyz
-
-
+# =========================================
+# SECURITY / SECRETS
+# (If you add environment files later)
+# =========================================
+.env
+*.env

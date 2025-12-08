@@ -1,7 +1,0 @@
-psutil
-pynput
-browser-history
-rumps
-py2app
-
-

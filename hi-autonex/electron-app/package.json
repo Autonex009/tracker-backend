@@ -1,0 +1,49 @@
+{
+  "name": "hi-autonex",
+  "version": "0.1.0",
+  "description": "Hi Autonex Electron + FastAPI app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.yourcompany.hiautonex",
+    "productName": "HiAutonex",
+    "files": [
+      "**/*",
+      "../backend/**"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/",
+        "to": "resources/",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.3",
+    "wait-on": "^7.0.1"
+  },
+  "devDependencies": {
+    "electron": "^39.2.6",
+    "electron-builder": "^24.0.0"
+  }
+}
